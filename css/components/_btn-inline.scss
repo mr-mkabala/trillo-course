@@ -1,0 +1,47 @@
+.btn-inline {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.3s;
+  }
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+
+    & span {
+      margin-left: 8px;
+    }
+  }
+
+  &:focus {
+    animation: pulsate 1s infinite;
+    outline: none;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: none;
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+  }
+
+  100% {
+    box-shadow: none;
+    transform: scale(1);
+  }
+}

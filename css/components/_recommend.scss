@@ -1,0 +1,25 @@
+.recommend {
+  align-items: center;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  font-size: 1.3rem;
+  justify-content: space-between;
+
+  &-count {
+    @media only screen and (max-width: $bp-smaller) {
+      width: 60%;
+    }
+  }
+
+  &-photo {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+
+    &:not(:last-child) {
+      margin-right: -2rem;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+  padding: 3rem;
+  position: relative;
+  z-index: 0;
+
+  @media only screen and (max-width: $bp-small) {
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 calc(50% - 1rem);
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    color: var(--color-grey-light-1);
+    content: "\201C";
+    font-family: sans-serif;
+    font-size: 25rem;
+    line-height: 1;
+    position: absolute;
+    top: -4rem;
+    left: -1.5rem;
+    z-index: -1;
+  }
+
+  &-text {
+    margin-bottom: 2rem;
+  }
+
+  &-user {
+    align-items: center;
+    display: flex;
+  }
+
+  &-photo {
+    border-radius: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  &-user-box {
+    margin-right: auto;
+    padding-left: 1.5rem;
+  }
+
+  &-user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &-user-date {
+    color: var(--color-grey-dark-3);
+    font-size: 1rem;
+  }
+
+  &-user-rating {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 300;
+  }
+}
